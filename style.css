@@ -1,0 +1,519 @@
+/* Global Styles */
+body {
+    background-color: #f2f6fc;  
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #204051;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+
+}
+/* Hamburger Menu */
+#hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Navigation Links Wrapper (for toggle) */
+#nav-links {
+    display: flex;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    #hamburger {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    #nav-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(20, 20, 20);
+    }
+
+    #navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    #navbar li {
+        margin: 0;
+    }
+
+    #nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        height: auto;
+    }
+}
+
+
+h1 {
+    color: #f2f6fc;
+    margin-left:60px
+}
+
+/* Navigation Links */
+#navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    margin-right:30px;
+    padding: 0;
+}
+
+#navbar li {
+    margin: 0;
+}
+
+#navbar a {
+    text-decoration: none;
+        color: #f2f6fc;  
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+#navbar a:hover {
+  color: #66ffcc; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Headings */
+h2 {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.hero p {
+    flex: 1;
+    min-width: 300px;
+    margin-left: 15px;
+}
+
+.hero img{
+    width:250px;
+    border:3px solid burlywood
+}
+.resume{
+    align-items: center;
+    display:flex;
+}
+/* Button Styling */
+button {
+    height: 50px;
+    
+    margin:0px 50px;
+    width: 160px;
+    color: white;
+    background-color: #204051;        /* ✅ Added stylish dark background */
+    font-weight: bold;
+    border:2px solid black;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #3b6978;        /* ✅ hover color */
+    color: #fff;
+    transform: scale(1.05);           /* ✅ subtle zoom effect */
+}
+
+/* Responsive Behavior */
+@media (max-width: 600px) {
+    .resume {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero img {
+        width: 200px;             /* smaller, mobile-friendly image */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .resume {
+        flex-direction: column;   /* stack buttons vertically */
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    button {
+        margin: 0;               /* center-align buttons properly on mobile */
+    }
+}
+
+
+
+
+/* Section Styling */
+section {
+    padding: 20px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px 20px;
+    background-color: #f2f6fc;
+}
+
+/* Individual project card */
+.project-card {
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    padding: 20px;
+    border: 2px solid #dcdcdc;
+    font-size:18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #204051;
+    background: linear-gradient(135deg, #d0ebff, #f2faff);
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech {
+    display: inline-block;
+    background-color: #204051;
+    color: white;
+    font-size: 15px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:hover .tech {
+    background-color: #0a192f;
+}
+
+/* GitHub button */
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.github-btn {
+    background-color: #204051;
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid transparent;
+}
+
+.github-btn:hover {
+    background-color: #0a192f;
+    transform: scale(1.05);
+    border-color: #66ffcc;
+}
+/* For screens up to 768px */
+@media (max-width: 768px) {
+  /* Adjust project card footer */
+  .project-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .github-btn {
+    align-self: flex-start;
+  }
+
+  .tech-tags {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* For very small screens (up to 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  #navbar a {
+    font-size: 16px;
+  }
+
+  .github-btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .tech {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+}
+
+/* === Dark Mode Styles === */
+body.dark-mode {
+  background-color: #0a192f;
+  color: #f2f6fc;
+}
+
+body.dark-mode #nav {
+  background-color: #121212;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f2f6fc;
+}
+
+body.dark-mode .project-card {
+  background: #1e2a38;
+  border-color: #2c3e50;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .tech {
+  background-color: #0c223f;
+}
+
+body.dark-mode .github-btn {
+  background-color: #204051;
+  color: #f2f6fc;
+}
+
+body.dark-mode .github-btn:hover {
+  background-color: #66ffcc;
+  color: #000;
+}
+
+/* Optional: Toggle Button Style */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-right: 30px;
+}
+
+body.dark-mode #theme-toggle {
+  color: #f2f6fc;
+}
+#contact {
+  padding: 20px 20px;
+  margin-top: 0;
+
+  background-color: #f2f6fc;
+  color: #204051;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 650px;      /* ✅ Slightly wider form */
+  margin: 0 auto;         /* ✅ Center the form */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;             /* ✅ Takes 90% of form width */
+  max-width: 600px;       /* ✅ Allows more horizontal space */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 0.5px solid #534040;
+  border-radius: 10px;
+  outline: none;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2e5a72;
+}
+
+.contact-form button {
+  background-color: #204051;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3b6978;
+  transform: scale(1.05);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 200px;
+}
+.contact-links p{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.contact-links i {
+  font-size: 40px;
+  color: #204051;
+  margin-left:20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover i {
+  color: #66ffcc;
+  transform: scale(1.2);
+}
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-links {
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+/* Dark Mode - Contact Section */
+body.dark-mode #contact {
+  background-color: #121212;
+  color: #a0c4ff;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #1e2a38;
+  color: #f2f6fc;
+  border-color: #3b6978;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  border-color: #66ffcc;
+}
+
+body.dark-mode .contact-form button {
+  background-color: #0a192f;
+  color: #66ffcc;
+}
+
+body.dark-mode .contact-form button:hover {
+  background-color: #66ffcc;
+  color: #0a192f;
+}
+
+body.dark-mode .contact-links p {
+  color: #66ffcc;
+}
+
+body.dark-mode .contact-links i {
+  color: #a0c4ff;
+}
+
+body.dark-mode .contact-links a:hover i {
+  color: #00ffcc;
+}
