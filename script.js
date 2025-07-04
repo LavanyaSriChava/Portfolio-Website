@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
     document.getElementById("resume").addEventListener("click", () => {
-        window.open("Lavanya Sri Chava Resume.pdf", "_blank");
+        window.open("Resume-LavanyaSriChava.pdf", "_blank");
     });
 
     // GitHub redirect
